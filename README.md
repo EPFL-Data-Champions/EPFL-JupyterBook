@@ -2,6 +2,8 @@
 
 This is a preconfigured template to use JupyterBooks at EPFL coupled with the JupyterHub platform at `noto.epfl.ch`. 
 
+You can view a preview [here](https://epfl-data-champions.github.io/EPFL-JupyterBook/intro.html)
+
 ## How to use
 
 Install required packages
