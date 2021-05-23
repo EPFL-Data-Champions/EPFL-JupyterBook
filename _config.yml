@@ -1,0 +1,65 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Introduction to teaching with JupyterBook
+author: EPFL Lab
+#logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+
+launch_buttons:
+  notebook_interface        : jupyterlab  # ["classic", "jupyterlab"]
+  jupyterhub_url            : "https://noto.epfl.ch"
+  binderhub_url             : ""
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  extra_footer              :   # Will be displayed underneath the footer.
+    <div class="container-lg mt-3 footer">
+      <div class="row">
+        <div class="col-xl-9 d-flex">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 d-flex" style="justify-content:center">
+            <a href=""> Name of Laboratory</a></li>
+
+              </div>
+              <div class="col-6 d-flex" style="justify-content:center">
+                <ul>
+                  <li> <a href="https://c4science.ch">C4Science </a> </li> </li>
+                  <li><a href="https://c4science.ch">C4Science </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row_footer my-3">
+      Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license.
+    </div>
