@@ -62,6 +62,28 @@ Here is your exercise question
 This is a warning
 ```
 
+Or using dropdowns 
+
+```{admonition} Solution
+:class: tip, dropdown
+This is the solution which can include math 
+
+$$
+ a^2+b^2 =  c^2
+$$
+
+or code 
+
+    value = f*2 + x-3
+
+
+```
+You can also use this for exercises
+
+```{admonition} Exercise2
+:class: exercise, dropdown
+Here's what's inside!
+```
 
 ### Using a role
 
