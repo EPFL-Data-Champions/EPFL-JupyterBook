@@ -159,11 +159,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/EPFL-Data-Champions/EPFL-JupyterBook"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/EPFL-Data-Champions/EPFL-JupyterBook/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -193,6 +193,13 @@
   <a class="reference internal nav-link" href="#how-to-use">
    How to use
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-book">
+     Build the book
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -208,14 +215,23 @@
   <div class="section" id="epfl-jupyterbook-template">
 <h1>EPFL JupyterBook template<a class="headerlink" href="#epfl-jupyterbook-template" title="Permalink to this headline">¶</a></h1>
 <p>This is a preconfigured template to use JupyterBooks at EPFL coupled with the JupyterHub platform at <code class="docutils literal notranslate"><span class="pre">noto.epfl.ch</span></code>.</p>
+<p>You can view a preview <a class="reference external" href="https://epfl-data-champions.github.io/EPFL-JupyterBook/intro.html">here</a></p>
 <div class="section" id="how-to-use">
 <h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
 <p>Install required packages</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements.txt
 </pre></div>
 </div>
-<p>Build the book</p>
+<p>Then modify the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files.</p>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> to configure which files to build and to setup latex macros,
+book title, footer etc.</p>
+<div class="section" id="build-the-book">
+<h3>Build the book<a class="headerlink" href="#build-the-book" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>Put on gh-pages branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
 <p>To change the footer edit the <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> tags in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p>
@@ -226,6 +242,7 @@
     <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
     <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">notebooks</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
