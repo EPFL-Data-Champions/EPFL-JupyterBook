@@ -2,6 +2,8 @@
 
 This is a preconfigured template to use JupyterBooks at EPFL coupled with the JupyterHub platform at `noto.epfl.ch`. 
 
+You can view a preview [here](https://epfl-data-champions.github.io/EPFL-JupyterBook/intro.html)
+
 ## How to use
 
 Install required packages
@@ -10,7 +12,15 @@ Install required packages
 $ pip install -r requirements.txt
 ```
 
-Build the book
+
+Then modify the `.md` and `.ipynb` files. 
+
+Modify the `_toc.yml` and `_config.yml` to configure which files to build and to setup latex macros,
+book title, footer etc. 
+
+
+
+### Build the book
 
 ```
 jb build .
