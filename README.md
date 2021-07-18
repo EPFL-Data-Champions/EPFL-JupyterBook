@@ -16,21 +16,14 @@ Build the book
 jb build .
 ```
 
-Put on gh-pages branch
+# Building a student version 
 
-```
-ghp-import -n -p -f _build/html
-```
+If you want to use github actions to deploy a student version automatically do the following: 
 
-To change the footer edit the `<a>` tags in `_config.yml`. 
+- rename workflows/ to .github/ 
+- create a public repository for the student version 
+- create a Personal Access Token in the github settings and add it as a secret under the name `TARGET_PAT` in the repository where the student and teacher version is located. 
+- adapt the .recipe/recipe.yml to copy and exclude the files that you do not want to copy (e.g because they contain solutions. You can exclude using wildcards)
 
-The toc needs to be structured as in order for the styling to work correctly
+With these settings in place, whenever you commit updates on the main (private) source repo, the repo will be duplicated in the public repo (minus e.g the instructor files) and will be built using the `_toc.yml` and published on the Github pages branch. 
 
-``` yaml
-- file: intro
-- part: Chapter Headline 
-  chapters:
-    - file: markdown
-    - file: notebooks
-
-```
